@@ -4,6 +4,12 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 </head>
 <body>
+	<h1>로그인</h1>
+	<form action="login.php" method="get">
+		<input type="text" name="id">
+		<input type="password" name="password">
+		<input type="submit" value="Submit">
+	</form>
 	<h1>검색</h1>
 	<!-- get 방식으로 index.php값을 보냄 -->
 	<form action="index.php" method="get">
