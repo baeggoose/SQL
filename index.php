@@ -4,9 +4,13 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-	<h1>Hello goorm</h1>
-
-    <?php
+	<h1>검색</h1>
+	<!-- get 방식으로 index.php값을 보냄 -->
+	<form action="index.php" method="get">
+		<input type="search" name="search">
+		<input type="submit" value="Submit">
+  </form>
+	<?php
 		$conn = mysqli_connect("localhost", "root", "123456", "testdb");
 		
 		// 	검색창으로 넘어온 값을 검색하는 코드 각 문자열을 연결시킬 때 + 가 아닌 . 을 사용
@@ -18,10 +22,9 @@
 		// table row
 		echo "<tr><th>ID</th><th>Title</th><th>Description</th></tr>";
 		while($row = mysqli_fetch_array($result)) {
-		  echo "<tr><td>{$row['id']}</td><td>{$row['title']}</td><td>{$row['description']}</td></tr>";
+			echo "<tr><td>{$row['id']}</td><td>{$row['title']}</td><td>{$row['description']}</td></tr>";
 		}
 		echo "</table>";
-		?>
-  
+	?>
 </body>
 </html>
