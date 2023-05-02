@@ -9,7 +9,8 @@
     <?php
 		$conn = mysqli_connect("localhost", "root", "123456", "testdb");
 		
-		$sql = "SELECT * FROM testtable";
+		// 	와일드카드 중 하나인 %를 사용하여 is인 키워드를 찾는 코드
+		$sql = "SELECT * FROM testtable where description like '%is%'";
 		$result = mysqli_query($conn, $sql);
 	
 		while($row = mysqli_fetch_array($result)) {
