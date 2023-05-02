@@ -12,11 +12,15 @@
 		// 	와일드카드 중 하나인 %를 사용하여 is인 키워드를 찾는 코드
 		$sql = "SELECT * FROM testtable where description like '%is%'";
 		$result = mysqli_query($conn, $sql);
-	
+
+		// bootstrap table
+		echo "<table class='table table-dark'>";
+		// table row
+		echo "<tr><th>ID</th><th>Title</th><th>Description</th></tr>";
 		while($row = mysqli_fetch_array($result)) {
-		  echo "<li>{$row['id']} - {$row['title']}</li>";
+		  echo "<tr><td>{$row['id']}</td><td>{$row['title']}</td><td>{$row['description']}</td></tr>";
 		}
-		
+		echo "</table>";
 		?>
   
 </body>
