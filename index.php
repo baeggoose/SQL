@@ -29,7 +29,7 @@
       </div>
     </div>
   </nav>
-	<h1>로그인</h1>
+	<h1 style="margin-top : 100px;">로그인</h1>
 	<form action="login.php" method="get">
 		<input type="text" name="id">
 		<input type="password" name="password">
